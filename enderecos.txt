@@ -5,3 +5,4 @@ https://github.com/brunompds/training-playground
 002 - Running Multiple Steps/01 - Jenkinsfile - Multiple Actions
 002 - Running Multiple Steps/02 - Jenkinsfile - Multiple Stages
 002 - Running Multiple Steps/03 - Jenkinsfile - Pipeline with Inputs
+002 - Running Multiple Steps/04 - Jenkinsfile - Conditional Stages
