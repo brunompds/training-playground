@@ -10,11 +10,9 @@ pipeline {
 				sh 'date > ficheiro.txt'
 			}
 		}
-    }
-	stages {
 		stage('test'){
 			steps{
-				sh ' cat ficheiro.txt | grep 2019'
+				sh 'cat ficheiro.txt | grep 2019'
 			}
 		}
     }
