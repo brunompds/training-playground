@@ -7,7 +7,7 @@ pipeline {
     stages {
 		stage('build'){
 			when{
-				exression { 
+				expression { 
 					return params.ENVIRONMENT == 'build'
 				}
 			}
@@ -17,7 +17,7 @@ pipeline {
 		}
 		stage('test'){
 			when{
-				exression { 
+				expression { 
 					return params.ENVIRONMENT == 'test'
 				}
 			}
