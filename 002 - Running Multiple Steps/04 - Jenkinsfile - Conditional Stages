@@ -4,6 +4,21 @@ pipeline {
 			image 'alpine:latest' 
 		}
 	}
+	parameters{
+		choice(name: 'CHOICE', choices: ['build','test'], description: 'Pick something')
+	}
     stages {
+		when{
+			expression{ params.CHOICE=='build'}
+		}
+		stage('build'){
+			echo 'build'
+		}
+		when{
+			expression{ params.CHOICE=='test'}
+		}
+		stage('test'){
+			echo 'test'
+		}
     }
 }
