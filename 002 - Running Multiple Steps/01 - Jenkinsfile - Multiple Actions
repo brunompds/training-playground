@@ -7,7 +7,9 @@ pipeline {
     stages {
 		stage('data'){
 			steps{
-				sh 'echo date > ficheiro.txt'
+				sh 'date > ficheiro.txt'
+				sh 'cat ficheiro.txt'
+				sh 'sleep 10'
 				sh 'cat ficheiro.txt'
 			}
 		}
