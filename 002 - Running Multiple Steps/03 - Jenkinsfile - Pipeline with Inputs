@@ -7,8 +7,12 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo "$NAME"
-                echo "$AGE"
+                script{
+                    def NAME = input message "nome?"
+                    def AGE = input message "idade?"
+                    echo "$NAME"
+                    echo "$AGE"
+                }
             }
         }
     }
