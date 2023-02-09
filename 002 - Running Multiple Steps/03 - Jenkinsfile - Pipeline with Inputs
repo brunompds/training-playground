@@ -6,13 +6,21 @@ pipeline {
 	}
     stages {
         stage('build') {
-            steps {
-                script{
-                    def NAME = input message "nome?"
-                    def AGE = input message "idade?"
-                    echo "$NAME"
-                    echo "$AGE"
+            input{
+                message "nome?"
+                parameters {
+                    string(name: 'NAME', defaultValue: '', description: '')
                 }
+            }    
+            input{
+                message "idade?"
+                parameters {
+                    string(name: 'AGE', defaultValue: '', description: '')
+                }
+            }   
+            steps { 
+                echo "$NAME"
+                echo "$AGE"
             }
         }
     }
