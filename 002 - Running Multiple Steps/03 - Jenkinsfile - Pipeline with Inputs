@@ -11,8 +11,6 @@ pipeline {
                 parameters {
                     string(name: 'NAME', defaultValue: '', description: '')
                 }
-            }    
-            input{
                 message "idade?"
                 parameters {
                     string(name: 'AGE', defaultValue: '', description: '')
