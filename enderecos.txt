@@ -1,0 +1,3 @@
+https://github.com/brunompds/training-playground
+001 - Creating Pipelines/03 - Jenkinsfile - Node Pipeline
+001 - Creating Pipelines/04 - Jenkinsfile - Triggered Pipeline
