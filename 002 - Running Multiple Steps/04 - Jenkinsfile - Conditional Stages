@@ -4,9 +4,6 @@ pipeline {
 			image 'alpine:latest' 
 		}
 	}
-	parameters{
-		choice(name: 'CHOICE', choices: ['build','test'], description: 'Pick something')
-	}
     stages {
 		stage('build'){
 			when{
