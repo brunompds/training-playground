@@ -8,18 +8,22 @@ pipeline {
 		choice(name: 'CHOICE', choices: ['build','test'], description: 'Pick something')
 	}
     stages {
-		when{
-			expression{ params.CHOICE=='build'}
-		}
 		stage('build'){
+			when{
+				exression { 
+					return params.ENVIRONMENT == 'build'
+				}
+			}
 			steps{
 				echo 'build'
 			}
 		}
-		when{
-			expression{ params.CHOICE=='test'}
-		}
 		stage('test'){
+			when{
+				exression { 
+					return params.ENVIRONMENT == 'test'
+				}
+			}
 			steps{
 				echo 'test'
 			}
