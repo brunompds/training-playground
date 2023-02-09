@@ -12,13 +12,17 @@ pipeline {
 			expression{ params.CHOICE=='build'}
 		}
 		stage('build'){
-			echo 'build'
+			steps{
+				echo 'build'
+			}
 		}
 		when{
 			expression{ params.CHOICE=='test'}
 		}
 		stage('test'){
-			echo 'test'
+			steps{
+				echo 'test'
+			}
 		}
     }
 }
