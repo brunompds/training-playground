@@ -3,3 +3,4 @@ https://github.com/brunompds/training-playground
 001 - Creating Pipelines/04 - Jenkinsfile - Triggered Pipeline
 
 002 - Running Multiple Steps/01 - Jenkinsfile - Multiple Actions
+002 - Running Multiple Steps/02 - Jenkinsfile - Multiple Stages
