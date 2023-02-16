@@ -1,29 +1,31 @@
-agent none
-stages {
-    stage('maven') {
-        agent { 
-            dockerfile {
-                dir '003 - Defining Execution Environments'
-                filename '041'
-                additionalBuildArgs ''
-                args ''
-            }  
+pipeline {
+    agent none
+    stages {
+        stage('maven') {
+            agent { 
+                dockerfile {
+                    dir '003 - Defining Execution Environments'
+                    filename '041'
+                    additionalBuildArgs ''
+                    args ''
+                }  
+            }
+            steps {
+                sh 'mvn --version'
+            }
         }
-        steps {
-            sh 'mvn --version'
-        }
-    }
-    stage('npm') {
-        agent { 
-            dockerfile {
-                dir '003 - Defining Execution Environments'
-                filename '042'
-                additionalBuildArgs ''
-                args ''
-            }  
-        }
-        steps {
-            sh 'npm --version'
+        stage('npm') {
+            agent { 
+                dockerfile {
+                    dir '003 - Defining Execution Environments'
+                    filename '042'
+                    additionalBuildArgs ''
+                    args ''
+                }  
+            }
+            steps {
+                sh 'npm --version'
+            }
         }
     }
 }
