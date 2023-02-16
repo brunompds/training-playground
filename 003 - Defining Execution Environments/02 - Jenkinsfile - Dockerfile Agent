@@ -15,5 +15,3 @@ pipeline {
         }
     }
 }
-
-/var/jenkins_home/workspace/usr1_workspace/00302/003 - Defining Execution Environments/02 - Dockerfile - Dockerfile Agent/Dockerfile: Not a directory
