@@ -1,7 +1,8 @@
 pipeline {
     agent { 
         dockerfile {
-            dir '003 - Defining Execution Environments/02 - Dockerfile - Dockerfile Agent'
+            dir '003 - Defining Execution Environments'
+            filename '02 - Dockerfile - Dockerfile Agent'
             additionalBuildArgs ''
             args ''
         }  
@@ -14,3 +15,5 @@ pipeline {
         }
     }
 }
+
+/var/jenkins_home/workspace/usr1_workspace/00302/003 - Defining Execution Environments/02 - Dockerfile - Dockerfile Agent/Dockerfile: Not a directory
