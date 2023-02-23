@@ -4,6 +4,14 @@ pipeline {
 			image 'alpine:latest' 
 		}
 	}
+    environment{
+        script {
+            def buildConfigs = readJSON text: '[{"name":"namejava", "command":"echo \'comandjava\'"},{"name":"namemaven", "command":"echo \'commandmaven\'"}]'
+            buildConfigs.each{ buildConfig ->
+                sh "echo '$buildConfig.name' && $buildConfig.command"
+            }
+        }
+    }
     stages {
         stage('build') {
             steps {
